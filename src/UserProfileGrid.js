@@ -18,6 +18,7 @@ const users = [
     image: tinker1,
     sharedConnections: 7
   },
+  
   // Add more user data as needed
 ];
 

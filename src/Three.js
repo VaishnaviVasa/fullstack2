@@ -1,20 +1,17 @@
 import React from 'react';
 import samsung from './samsung.png';
 import tinker1 from './tinker1.jpg';
-
-function Three() {
+//styling the image and acces the 2 times
+//access the property of another file into this
+function Three(props) {
     return (
-        <div>
-            <h1>Reviews</h1>
-            <div>
-                <img src={samsung} alt="Samsung product is good" />
-                <h3>This product is good</h3> {/* Description for Samsung */}
-            </div>
-            <div>
-                <img src={tinker1} alt="Tinker product is excellent" />
-                <h3>This product is excellent</h3 > {/* Description for Tinker */}
-            </div>
-        </div>
+        <div className="m-3 text-center">
+        <img src={samsung} width="200"/>
+        <h3>{props.pro.name}</h3>
+        <h3>{props.pro.branch}</h3>
+        <h3>{props.pro.Year}</h3>
+        <button type="button" class="btn btn-primary">Connect</button>
+    </div>
     );
 }
 

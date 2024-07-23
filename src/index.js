@@ -1,13 +1,37 @@
-/*import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import One from "./One";
 import Four from "./Four";
 import Five from "./Five";
 import Three from "./Three"
+import Six from "./Six";
+import Seven from "./Seven";
+import Eight from "./Eight";
+import Nine from "./Nine";
+import Ten from "./Ten";
 const rootElement=document.getElementById('root');
 const rootRef=ReactDOM.createRoot(rootElement);
-rootRef.render(<Three/>)*/
+rootRef.render(<Ten/>)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // src/index.js
-import React from 'react';
+/*import React from 'react';
 import ReactDOM from 'react-dom/client';
 import UserProfileGrid from './UserProfileGrid';
 import { Container } from '@mui/material';
@@ -22,4 +46,4 @@ root.render(
       <UserProfileGrid />
     </Container>
   </React.StrictMode>
-);
+);*/
