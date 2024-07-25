@@ -8,9 +8,20 @@ import Seven from "./Seven";
 import Eight from "./Eight";
 import Nine from "./Nine";
 import Ten from "./Ten";
+import Product from "./Product";
+import Eleven from "./Eleven";
+import Login from "./Login";
+import Twelve from "./Twelve";
+import Register from "./Register";
+import Reg from "./Reg";
+import DataFetching from "./DataFetching";
+import Ecommerce from "./Ecommerce";
+import DataFetching2 from "./DataFetching2";
+import App from "./App";
 const rootElement=document.getElementById('root');
 const rootRef=ReactDOM.createRoot(rootElement);
-rootRef.render(<Ten/>)
+rootRef.render(<App/>)
+
 
 
 

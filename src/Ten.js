@@ -7,13 +7,14 @@ function Ten()
     //arrow function
     const inputValueChange=(event)=>
     {
-        console.log(event.target.value);
         setReview(event.target.value)
     }
     const addReview=()=>{
-
+        if (review) { 
+            setDisplay([reviewToDisplay, review]);
+            setReview(''); 
+        }
         console.log("Adding a review...");
-        setDisplay(review);
     }
     return (
         <div className="container">
