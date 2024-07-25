@@ -18,6 +18,7 @@ import DataFetching from "./DataFetching";
 import Ecommerce from "./Ecommerce";
 import DataFetching2 from "./DataFetching2";
 import App from "./App";
+import Navigation from "./Navigation";
 const rootElement=document.getElementById('root');
 const rootRef=ReactDOM.createRoot(rootElement);
 rootRef.render(<App/>)

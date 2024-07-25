@@ -1,4 +1,5 @@
 import { useRef, useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Register(){
     const[msg,setmsg]=useState("");
@@ -8,6 +9,7 @@ function Register(){
     const [branchValue,setBranch]=useState('');
     const [yearValue,setYear]=useState('');
     const [genderValue,setGender]=useState('');
+    const nav=useNavigate();
     const getCollegeId = (event)=>{
         setCollegeId(event.target.value);
     };
@@ -28,21 +30,28 @@ function Register(){
     };
     const sub=(event)=>{
         event.preventDefault();//prevent reload
-        console.log(collegeId);
-        console.log(password);
-        console.log(emailValue);
-        console.log(branchValue);
-        console.log(yearValue);
-        console.log(genderValue);
-
-        // Reset input values
-        setCollegeId('');
-        setPassword('');
-        setEmail('');
-        setBranch('');
-        setYear('');
-        setGender('');
-        setmsg("Succesfully submitted");
+        if(collegeId && password && emailValue && branchValue && yearValue && genderValue)
+        {
+            console.log(collegeId);
+            console.log(password);
+            console.log(emailValue);
+            console.log(branchValue);
+            console.log(yearValue);
+            console.log(genderValue);
+    
+            // Reset input values
+            setCollegeId('');
+            setPassword('');
+            setEmail('');
+            setBranch('');
+            setYear('');
+            setGender('');
+            setmsg("Succesfully submitted");
+            nav("/ecommerce");
+        }   
+        else{
+            setmsg("Please fill the form..");
+        }
     };
     return(
         <div className="d-flex justify-content-center">

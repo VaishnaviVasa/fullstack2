@@ -1,11 +1,14 @@
 import { useRef, useState,useEffect } from "react";
 import Ecommerce from "./Ecommerce";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function Login()
 {
     const first=useRef(null);
     const sec=useRef(null);
     const[msg,setmsg]=useState("");
+    const nav=useNavigate();
+    
     useEffect(()=>{
         first.current.focus();
     });
@@ -13,19 +16,16 @@ function Login()
         event.preventDefault();//prevent reload
         console.log(first.current.value);
         console.log(sec.current.value);
-        if(first.current.value==sec.current.value){
+        if(first.current.value==sec.current.value && first.current.value && sec.current.value){
             console.log("correct");
+            nav("/ecommerce");
         }
         else{
-            console.log("Incorect");
+            setmsg("Invalid details!")
         }
         first.current.value='';
         sec.current.value='';   
-        setmsg(
-            <Routes>
-                <Route path="/" element={<Ecommerce/>}/>
-            </Routes>
-        );
+        setmsg("Incorrect details");
     };
     return (
         <div className="d-flex justify-content-center">
